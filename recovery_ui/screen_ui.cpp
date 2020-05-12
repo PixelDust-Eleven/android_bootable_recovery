@@ -826,7 +826,9 @@ void ScreenRecoveryUI::draw_menu_and_text_buffer_locked(
     if (!title_lines_.empty()) {
       SetColor(UIElement::INFO);
       y += DrawTextLines(x, y, title_lines_);
+      y += MenuItemPadding();
     }
+
     y += menu_->DrawHeader(x, y);
     menu_start_y_ = y + 12; // Skip horizontal rule and some margin
     menu_->SetMenuHeight(std::max(0, ScreenHeight() - menu_start_y_));
