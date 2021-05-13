@@ -58,7 +58,7 @@ bool NetlinkManager::start() {
     nladdr.nl_groups = 0xffffffff;
 
     if ((mSock = socket(PF_NETLINK, SOCK_DGRAM | SOCK_CLOEXEC, NETLINK_KOBJECT_UEVENT)) < 0) {
-        SLOGE("Unable to create uevent socket: %s", strerror(errno));
+        //SLOGE("Unable to create uevent socket: %s", strerror(errno));
         return false;
     }
 

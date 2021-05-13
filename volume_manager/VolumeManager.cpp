@@ -181,7 +181,7 @@ bool VolumeManager::start(VolumeWatcher* watcher) {
     }
 
     if (!mNetlinkManager->start()) {
-        LOG(ERROR) << "Unable to start NetlinkManager";
+        //LOG(ERROR) << "Unable to start NetlinkManager";
         return false;
     }
 
